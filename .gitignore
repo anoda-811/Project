@@ -1,0 +1,31 @@
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+*.mdb
+*.opendb
+*.log
+
+# VS Code
+.vscode/
+
+# ASP.NET Core
+appsettings*.json
+*.db
+
+# Publish output
+publish/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# その他（自動生成系）
+*.dll
+*.deps.json
+*.runtimeconfig.json

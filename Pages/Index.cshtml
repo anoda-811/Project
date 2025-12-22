@@ -1,10 +1,106 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "音楽";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="cinema-frame">
+  <div class="hero-video">
+    <iframe
+        id="heroPlayer"
+        src="https://www.youtube.com/embed/@Model.HeroVideoId">
+    </iframe>
+  </div>
 </div>
+
+<div class="full-width">
+<section class="video-row">
+    <h2>感傷的な夜に <span>indigo la End</span></h2>
+    <div class="video-list">
+        <button type="button" class="thumb" data-video-id="kiTn9pgnj8I">
+            <img src="/images/チューリップ.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="aqoeNOw4_uQ">
+            <img src="/images/名前は片想い.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="IMU0ctb7E60">
+            <img src="/images/夏夜のマジック.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="84zftzaVBOE">
+            <img src="/images/通り恋.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="UnP0i3WIeX0">
+            <img src="/images/雫に恋して.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="BKbRotDP5mg">
+            <img src="/images/忘れて花束.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="ooyLQtZGQ68">
+            <img src="/images/夜汽車は走る.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="QIG0HDjMgQg">
+            <img src="/images/ラムネ.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="GTHG8pfG_UM">
+            <img src="/images/想いきり.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="jSW-tfnSvPM">
+            <img src="/images/夜明けの街でサヨナラを.png">
+        </button>
+    </div>
+    </section>
+
+    <section class="video-row">
+    <h2>少しエロい夏の思い出 <span>クリープハイプ</span></h2>
+    <div class="video-list">
+        <button type="button" class="thumb" data-video-id="GpADSdd68UI">
+        <img src="/images/おやすみ泣き声.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="PO-IaIg_JuU">
+        <img src="/images/オレンジ.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="qU-mi_S68Dk">
+        <img src="/images/憂、燦々.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="bLj2mNuw-M8">
+        <img src="/images/手と手.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="_oOtZsHhyIA">
+        <img src="/images/本当なんてぶっ飛ばしてよ.png">
+        </button>
+        <button type="button" class="thumb" data-video-id="9tGaS7mLI_I">
+        <img src="/images/喉仏.png">
+        </button>
+    </div>
+    </section>
+</div>
+
+
+@section Scripts {
+  <script>
+    const heroPlayer = document.getElementById('heroPlayer');
+
+    // --- 初期表示 ---
+    const lastVideo = localStorage.getItem("lastVideo");
+    if (lastVideo) {
+    heroPlayer.src = `https://www.youtube.com/embed/${lastVideo}`;
+    }
+
+    // サムネクリック時処理
+    document.querySelectorAll('.thumb').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            document.querySelectorAll('.thumb')
+            .forEach(b => b.classList.remove('active'));
+
+            btn.classList.add('active');
+
+            // トップへ
+            window.scrollTo({ top: 0, left: 0 });
+
+            heroPlayer.src =
+            `https://www.youtube.com/embed/${btn.dataset.videoId}`;
+        });
+    });
+  </script>
+}

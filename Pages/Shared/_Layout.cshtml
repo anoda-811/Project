@@ -16,8 +16,8 @@
                 <a asp-page="/Index">ANODAFLEX</a>
             </div>
             <nav class="nf-nav">
-                <a asp-page="/Index">音楽</a>
-                <a asp-page="/Privacy">シリーズ</a>
+                <a asp-page="/Index">ホーム</a>
+                <a asp-page="/Music">音楽</a>
                 <a asp-page="/About">映画</a>
                 <a asp-page="/About">クイズ</a>
                 <a asp-page="/About">新作＆人気作</a>
@@ -83,6 +83,7 @@
         </div>
     </footer>
 
+    <script src="~/js/site.js"></script>
     @RenderSection("Scripts", required: false)
     <script>
         const slider = document.querySelector(".nf-top10-slider");

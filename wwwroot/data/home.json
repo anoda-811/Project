@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "title": "最高な体験を",
+      "artist": "Live映像",
+      "videos": [
+        { "id": "oUDNUv7D3n8", "thumb": "/images/時よ止まれ.png" },
+        { "id": "NH21FTlVPes", "thumb": "/images/ライラック.png" },
+        { "id": "8ZN40f8R7eg", "thumb": "/images/UNDEAD.png" },
+        { "id": "ihZLtVsXEHs", "thumb": "/images/TAIDADA.png" },
+        { "id": "Hz-VBzYHA0k", "thumb": "/images/ミュージック.png" },
+        { "id": "YmvAXVmfK0A", "thumb": "/images/晴る.png" },
+        { "id": "NAV75JLdq8E", "thumb": "/images/present.png" }
+      ]
+    },
+    {
+      "title": "眠れない夜に",
+      "artist": "ASMR特集",
+      "videos": [
+        { "id": "3x5PzivPJ3Q", "thumb": "/images/raffy1.png" },
+        { "id": "19GUNqBsqo0", "thumb": "/images/リシー1.png" },
+        { "id": "c1B-9jXNikE", "thumb": "/images/calm1.png" },
+        { "id": "la0M279K78k", "thumb": "/images/Izak1.png" }
+      ]
+    }
+  ]
+}

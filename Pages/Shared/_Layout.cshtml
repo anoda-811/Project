@@ -9,44 +9,97 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RazorSite.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">RazorSite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+<body class="nf-body">
+    <header class="nf-header">
+        <div class="nf-left">
+            <div class="nf-logo">
+                <a asp-page="/Index">ANODAFLIX</a>
             </div>
-        </nav>
+            <nav class="nf-nav">
+                <a asp-page="/Index">ホーム</a>
+                <a asp-page="/Music">音楽</a>
+                <a asp-page="/Movie">映画</a>
+                <a asp-page="/About">動画</a>
+                <a asp-page="/About">新作＆人気作</a>
+                <a asp-page="/About">マイリスト</a>
+            </nav>
+        </div>
+
+        <div class="nf-right">
+            <button class="nf-icon-btn">🔍</button>
+            <span class="nf-kids">キッズ</span>
+            <button class="nf-icon-btn">🔔</button>
+            <div class="nf-profile"></div>
+        </div>
     </header>
-    <div class="container">
+
+    <div class="main-container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - RazorSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="nf-big-footer">
+        <div class="nf-footer-container">
+            <div class="nf-footer-social">
+                <span class="nf-social-icon">📘</span>
+                <span class="nf-social-icon">📷</span>
+                <span class="nf-social-icon">🐦</span>
+                <span class="nf-social-icon">▶️</span>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <div class="nf-footer-links">
+                <ul>
+                    <li><a href="#">音声ガイド</a></li>
+                    <li><a href="#">IR情報</a></li>
+                    <li><a href="#">プライバシー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">ヘルプセンター</a></li>
+                    <li><a href="#">採用情報</a></li>
+                    <li><a href="#">法的事項</a></li>
+                    <li><a href="#">特定商取引法</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">プリペイド・ギフトカード</a></li>
+                    <li><a href="#">公式ショップ</a></li>
+                    <li><a href="#">Cookie設定</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">メディアセンター</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">会社情報</a></li>
+                </ul>
+            </div>
+
+            <div class="nf-footer-copy">
+                © 2001-2025 anodaflix, inc.
+            </div>
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+    <script>
+        const slider = document.querySelector(".nf-top10-slider");
 
-    @await RenderSectionAsync("Scripts", required: false)
+        // → 進む
+        document.querySelector(".nf-top10-next")
+            .addEventListener("click", function () {
+                slider.scrollBy({ left: 1300, behavior: "smooth" });
+            });
+
+        // ← 戻る
+        document.querySelector(".nf-top10-prev")
+            .addEventListener("click", function () {
+                slider.scrollBy({ left: -1300, behavior: "smooth" });
+            });
+    </script>
 </body>
+
 </html>

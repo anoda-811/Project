@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "ホーム";
+    ViewData["Title"] = "音楽";
 }
 <div class="cinema-frame">
   <div class="hero-video">
@@ -19,19 +19,13 @@
 @section Scripts {
   <script>
     // 各行表示呼び出し
-    loadRows("/data/home.json");
+    loadRows("/data/music.json");
 
     // サムネクリック時共通処理
     initThumbnailPlayer({
         heroPlayerId: "heroPlayer",
         scrollTop: true,
-        storageKey: "home:lastVideo"
-    });
-
-    // スクロール処理
-    initHorizontalScrollSpeed({
-        selector: ".video-list",
-        speed: 0.6
+        storageKey: "music:lastVideo"
     });
   </script>
 }

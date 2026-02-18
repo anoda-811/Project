@@ -29,3 +29,474 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* =========================
+   Netflix風ヘッダー基本
+   ========================= */
+
+.nf-body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+}
+
+/* ヘッダー全体 */
+.nf-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: linear-gradient(to bottom, #000000, #141414);
+}
+
+/* 左側（ロゴ＋メニュー） */
+.nf-left {
+    display: flex;
+    align-items: center;
+}
+
+/* ロゴ */
+.nf-logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e50914;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+/* ナビ */
+.nf-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+.nf-nav a:hover {
+    text-decoration: underline;
+}
+
+/* 右側（アイコン類） */
+.nf-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.nf-icon-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nf-kids {
+    color: #ffffff;
+}
+
+/* プロフィールアイコンぽいやつ */
+.nf-profile {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: #1f80e0;
+}
+
+/* メインコンテンツの横幅 */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* フッター */
+.nf-footer {
+    margin-top: 40px;
+    padding: 20px 40px;
+    font-size: 12px;
+    color: #808080;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+/* ===========================
+   Netflix 風フッター
+   =========================== */
+
+.nf-big-footer {
+    margin-top: 60px;
+    padding: 40px 20px 60px;
+    background-color: #141414;
+    color: #808080;
+    font-size: 13px;
+}
+
+.nf-footer-social {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.nf-social-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.nf-footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+.nf-footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nf-footer-links li {
+    margin-bottom: 12px;
+}
+
+.nf-footer-links a {
+    color: #b3b3b3 !important;   /* ← 青になる場合は !important が必須 */
+    text-decoration: none;
+}
+
+.nf-footer-links a:hover {
+    text-decoration: underline;
+    color: #b3b3b3 !important;  /* ホバーは白に近い色 */
+}
+
+.nf-footer-copy {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #737373;
+}
+
+/* フッター中央寄せコンテナ */
+.nf-footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* same as before */
+.nf-hero {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.8)),
+        url("/images/hero-bg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   Netflix風 TOP10 ランキング
+   =========================== */
+
+/* セクション全体 */
+.nf-top10-section {
+    position: relative;
+    padding-top: 170px; 
+    padding-bottom: 170px;
+    height: 200px;
+}
+
+.nf-top10-slider {
+    display: flex;
+    gap: 150px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+.nf-top10-slider::-webkit-scrollbar {
+    height: 8px;
+}
+.nf-top10-slider::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+/* スクロールバー非表示（Chrome・Edge・Safari） */
+.nf-top10-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* スクロールバー非表示（Firefox） */
+.nf-top10-slider {
+    scrollbar-width: none;
+}
+
+.nf-top10-slider .nf-top10-item:first-child {
+    margin-left: 100px;   /* ← 好みで調整（70〜120でもOK） */
+}
+
+/* 1つのカード */
+.nf-top10-item {
+    position: relative;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+/* デカい数字（後ろに配置） */
+.nf-top10-number {
+    position: absolute;
+    left: -150px;
+    bottom: 0;
+    font-size: 280px;
+    font-weight: 900;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    line-height: 0.8;
+
+    /* 中身（塗り）を薄い黒に */
+    color: rgba(0, 0, 0, 0.4);  
+
+    /* 外枠（縁取り）をNetflixっぽい薄グレーに */
+    -webkit-text-stroke: 8px rgba(255, 255, 255, 0.2);
+    text-stroke: 8px rgba(255, 255, 255, 0.2);
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 映画画像 */
+.nf-top10-img {
+    background-color: #333;
+    width: 140px;
+    height: 210px;  /* 縦幅を明示すると崩れない */
+    object-fit: cover;
+    border-radius: 6px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.nf-top10-img:hover {
+    transform: scale(1.08);
+}
+
+/* 基本：非表示で透過 */
+.nf-top10-prev,
+.nf-top10-next {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    position: absolute;
+    top: 50%;
+    width: 46px;
+    height: 80px;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0,0,0,0.45);
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ホバーで出現 */
+.nf-top10-section:hover .nf-top10-prev,
+.nf-top10-section:hover .nf-top10-next {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 位置 */
+.nf-top10-prev { left: 0; }
+.nf-top10-next { right: 0; }
+
+/* ホバー効果 */
+.nf-top10-prev:hover,
+.nf-top10-next:hover {
+    background: rgba(0,0,0,0.75);
+}
+
+/* 10位修正（最強セット） */
+.nf-top10-item:nth-child(10) .nf-top10-number {
+    left: -230px;
+    font-size: 240px;
+    letter-spacing: -35px;
+    -webkit-text-stroke: 9px rgba(255,255,255,0.18);
+}
+
+/* TOP10セクションをフル幅で表示（1200px制限を無効化） */
+.nf-top10-section {
+    width: 100vw;          /* 画面幅いっぱい */
+    margin-left: calc(50% - 50vw);  /* コンテナ中央位置から引き戻す魔法 */
+    padding: 0 40px;       /* 左右の余白 */
+}
+
+/* TOPビデオ */
+/* 黒帯 */
+.cinema-frame {
+  width: 100%;
+  padding: 32px 0;           /* 上下のみ */
+}
+
+/* 動画コンテナ */
+.hero-video {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;            /* ← 左右完全中央寄せ */
+  aspect-ratio: 16 / 9;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+/* iframe本体 */
+.hero-video iframe {
+  display: block;            /* ← 超重要（inlineだとはみ出す） */
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.video-wrapper {
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+body {
+  caret-color: transparent;
+  overflow-x: hidden;
+}
+
+/*スクリーン切り替え*/
+.hero-video {
+  transition: opacity 0.3s ease;
+}
+.hero-video.is-switching {
+  opacity: 0;
+}
+
+.video-list {
+  overflow: visible;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;     /* ← 横スクロール */
+  overflow-y: visible;
+  padding-bottom: 8px;  /* スクロールバー用 */
+  flex-wrap: nowrap;
+  padding: 20px 12px 30px; /* ← ★ここ */
+}
+.video-list::-webkit-scrollbar {
+  height: 6px;
+  display: none;  
+}
+
+.video-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+
+.video-row {
+  margin-top: 48px;
+}
+.video-row h2 {
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500; /* 600→500 くらい */
+}
+.video-row h2 span {
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.thumb {
+  width: 320px;        /* ← ここでサイズ調整 */
+  height: 180px;        /* 16:9 */
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  position: relative;
+  overflow: visible; /* ← 絶対必要 */
+  flex: 0 0 auto;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ← はみ出さずトリミング */
+  border-radius: 8px;
+}
+
+.thumb:hover {
+  transform: scale(1.2);
+  z-index: 20;
+}
+
+.thumb.active img {
+  outline: 3px solid #e50914; /* Netflix赤 */
+}
+
+.thumb.active {
+  position: relative;
+}
+
+.thumb.active::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 12px;
+  padding: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 60, 60, 0.6),
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: redFlow 6s linear infinite;
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  pointer-events: none;
+}
+
+@keyframes redFlow {
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
+}
+
+.full-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-left: 60px;   /* ← ここ重要 */
+  padding-right: 60px;
+  box-sizing: border-box;
+}

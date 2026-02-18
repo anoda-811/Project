@@ -1,7 +1,7 @@
 {
   "rows": [
     {
-      "title": "最高な体験を",
+      "title": "最高の体験を",
       "artist": "Live映像",
       "videos": [
         { "id": "oUDNUv7D3n8", "thumb": "/images/時よ止まれ.png" },
@@ -11,6 +11,16 @@
         { "id": "Hz-VBzYHA0k", "thumb": "/images/ミュージック.png" },
         { "id": "YmvAXVmfK0A", "thumb": "/images/晴る.png" },
         { "id": "NAV75JLdq8E", "thumb": "/images/present.png" }
+      ]
+    },
+    {
+      "title": "The KAWAII",
+      "artist": "日本アイドル",
+      "videos": [
+        { "id": "wRzPuptA6yw", "thumb": "/images/君はハニーデュー.png" },
+        { "id": "_cf4UTe1qrY", "thumb": "/images/ラブソングに襲われる.png" },
+        { "id": "iDbeAAs1Goo", "thumb": "/images/JAM.png" },
+        { "id": "AtDErGSpfYQ", "thumb": "/images/ひたむきシンデレラ.png" }
       ]
     },
     {

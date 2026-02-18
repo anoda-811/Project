@@ -17,7 +17,7 @@
       ]
     },
     {
-      "title": "少しエロい夏の思い出",
+      "title": "世界観に溺れる",
       "artist": "クリープハイプ",
       "videos": [
         { "id": "GpADSdd68UI", "thumb": "/images/おやすみ泣き声.png" },
@@ -25,7 +25,18 @@
         { "id": "qU-mi_S68Dk", "thumb": "/images/憂、燦々.png" },
         { "id": "bLj2mNuw-M8", "thumb": "/images/手と手.png" },
         { "id": "_oOtZsHhyIA", "thumb": "/images/本当なんてぶっ飛ばしてよ.png" },
-        { "id": "9tGaS7mLI_I", "thumb": "/images/喉仏.png" }
+        { "id": "9tGaS7mLI_I", "thumb": "/images/喉仏.png" },
+        { "id": "byBlNvY36EE", "thumb": "/images/しょうもな.png" }
+      ]
+    },
+    {
+      "title": "惜しまれる解散",
+      "artist": "清 竜人25",
+      "videos": [
+        { "id": "LpI-kdJSKuU", "thumb": "/images/グッバイ愛してるよ.png" },
+        { "id": "2NEld3A1L98", "thumb": "/images/世界を愛せますように.png" },
+        { "id": "_MfSy7AP4Bo", "thumb": "/images/彼氏いるんだって.png" },
+        { "id": "ApuEJ4zZ9i8", "thumb": "/images/青春しちゃっていいじゃん.png" }
       ]
     }
   ]

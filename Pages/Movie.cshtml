@@ -1,0 +1,31 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "映画";
+}
+<div class="cinema-frame">
+  <div class="hero-video">
+    <iframe
+        id="heroPlayer"
+        src="https://www.youtube.com/embed/@Model.HeroVideoId">
+    </iframe>
+  </div>
+</div>
+
+<div class="full-width">
+    <div id="rows-root"></div>
+</div>
+
+@section Scripts {
+  <script>
+    // 各行表示呼び出し
+    loadRows("/data/movie.json");
+
+    // サムネクリック時共通処理
+    initThumbnailPlayer({
+        heroPlayerId: "heroPlayer",
+        scrollTop: true,
+        storageKey: "movie:lastVideo"
+    });
+  </script>
+}
